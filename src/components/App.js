@@ -25,9 +25,9 @@ function App() {
       })
       .catch((err) => console.log("error fetching data from flicker", err));
     return () => {
-      setLoadStatus(true);
+      setLoadStatus(true); //component did unmount
     };
-  }, [search]);
+  }, [search]); //Compoenent did update
 
   return (
     <div className="container">
